@@ -28,6 +28,7 @@
        01 again  pic x(36) VALUE "Appuyez sur Entrée".
 
        Procedure division.
+      *this programme will boucle 5 time
            PERFORM 8000-begin
            THRU 8000-end
            UNTIL  boucle = 5
@@ -45,7 +46,7 @@
            Display tuas SPACE outputage SPACE dents.
            Display bye.
            Display again.
-           ACCEPT bye FROM CONSOLE.
+           ACCEPT.
        8000-end.
 
            exit program.
