@@ -13,25 +13,24 @@
 
       *inputtext is a question outputtext will save your answer.
 
-       01 inputnom     pic x(17) VALUE "Quel est ton nom?".
+         01 inputnom     pic x(17) VALUE "Quel est ton nom?".
        01 outputnom    pic x(10).
-       01 inprenom  pic x(20) VALUE "Quel est ton prenom?".
-       01 outprenom pic x(10).
+       01 inprenom     pic x(20) VALUE "Quel est ton prenom?".
+       01 outprenom    pic x(10).
        01 inputage     pic x(15) VALUE "Quel âge as-tu?".
        01 outputage    pic x(2).
-       01 enchante     pic x(7) VALUE "Enchanté".
+       01 enchante     pic x(7) VALUE "Enchante".
        01 point        pic x(1) VALUE ".".
        01 tuas         pic x(5) VALUE "Tu as".
        01 dents        pic x(25) VALUE "ans, et toutes tes dents!".
-       01 boucle       pic 9.
+       01 boucle       pic 9(1) VALUE 1.
        01 bye          pic x(4) VALUE "bye!".
-       01 again  pic x(36) VALUE "Appuyez sur Entrée".
+       01 again  pic x(35) VALUE "Appuyez sur Entrée pour recommencer".
 
        Procedure division.
-      *this programme will boucle 5 time
            PERFORM 8000-begin
            THRU 8000-end
-           UNTIL  boucle = 5
+           UNTIL  boucle = 5.
            stop run.
 
        8000-begin.
@@ -47,6 +46,7 @@
            Display bye.
            Display again.
            ACCEPT bye.
+           ADD 1 TO boucle.
        8000-end.
 
            exit program.
