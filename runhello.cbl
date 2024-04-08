@@ -46,7 +46,7 @@
            Display tuas SPACE outputage SPACE dents.
            Display bye.
            Display again.
-           ACCEPT.
+           ACCEPT bye.
        8000-end.
 
            exit program.
