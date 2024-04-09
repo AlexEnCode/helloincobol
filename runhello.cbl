@@ -41,6 +41,7 @@
            Accept outprenom.
            Display inputage.
            Accept outputage.
+
            Display enchante SPACE outprenom SPACE outputnom SPACE point.
            Display tuas SPACE outputage SPACE dents.
            Display bye.
