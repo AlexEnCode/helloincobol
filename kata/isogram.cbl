@@ -1,0 +1,144 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. isogram.
+       
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       
+       01 WS-LEMOT    PIC X(30).
+       01 WS-MOT-TRIM PIC X(30). 
+       01 WS-BOUCLING pic 99 value ZERO.
+       01 WS-FINISHED pic 99 value 1.
+       01 WS-EXITCODE pic X  value 'y'. 
+
+       01 A-COUNTER   PIC 99 VALUE ZERO.
+       01 Z-COUNTER   PIC 99 VALUE ZERO.
+       01 E-COUNTER   PIC 99 VALUE ZERO.
+       01 R-COUNTER   PIC 99 VALUE ZERO.
+       01 T-COUNTER   PIC 99 VALUE ZERO.
+       01 Y-COUNTER   PIC 99 VALUE ZERO.
+       01 U-COUNTER   PIC 99 VALUE ZERO.
+       01 I-COUNTER   PIC 99 VALUE ZERO.
+       01 O-COUNTER   PIC 99 VALUE ZERO.
+       01 P-COUNTER   PIC 99 VALUE ZERO.
+       01 Q-COUNTER   PIC 99 VALUE ZERO.
+       01 S-COUNTER   PIC 99 VALUE ZERO.
+       01 F-COUNTER   PIC 99 VALUE ZERO.
+       01 G-COUNTER   PIC 99 VALUE ZERO.
+       01 H-COUNTER   PIC 99 VALUE ZERO.
+       01 J-COUNTER   PIC 99 VALUE ZERO.
+       01 K-COUNTER   PIC 99 VALUE ZERO.
+       01 L-COUNTER   PIC 99 VALUE ZERO.
+       01 M-COUNTER   PIC 99 VALUE ZERO.
+       01 W-COUNTER   PIC 99 VALUE ZERO.
+       01 X-COUNTER   PIC 99 VALUE ZERO.
+       01 C-COUNTER   PIC 99 VALUE ZERO.
+       01 V-COUNTER   PIC 99 VALUE ZERO.
+       01 N-COUNTER   PIC 99 VALUE ZERO.
+       01 B-COUNTER   PIC 99 VALUE ZERO.
+
+
+       PROCEDURE DIVISION.
+
+           PERFORM 1000-BEGIN
+           UNTIL WS-BOUCLING = WS-FINISHED.
+           STOP RUN.
+
+       1000-BEGIN.
+
+           DISPLAY "Entrez votre mot :" WITH NO ADVANCING.
+           ACCEPT WS-LEMOT.
+           MOVE FUNCTION UPPER-CASE (WS-LEMOT) TO WS-LEMOT.
+           MOVE FUNCTION TRIM (WS-LEMOT) TO WS-MOT-TRIM.
+
+           INSPECT WS-MOT-TRIM TALLYING A-COUNTER FOR ALL 'A'.
+           INSPECT WS-MOT-TRIM TALLYING Z-COUNTER FOR ALL 'Z'.
+           INSPECT WS-MOT-TRIM TALLYING E-COUNTER FOR ALL 'E'.
+           INSPECT WS-MOT-TRIM TALLYING R-COUNTER FOR ALL 'R'.
+           INSPECT WS-MOT-TRIM TALLYING T-COUNTER FOR ALL 'T'.
+           INSPECT WS-MOT-TRIM TALLYING Y-COUNTER FOR ALL 'Y'.
+           INSPECT WS-MOT-TRIM TALLYING U-COUNTER FOR ALL 'U'.
+           INSPECT WS-MOT-TRIM TALLYING I-COUNTER FOR ALL 'I'.
+           INSPECT WS-MOT-TRIM TALLYING O-COUNTER FOR ALL 'O'.
+           INSPECT WS-MOT-TRIM TALLYING P-COUNTER FOR ALL 'P'.
+           INSPECT WS-MOT-TRIM TALLYING Q-COUNTER FOR ALL 'Q'.
+           INSPECT WS-MOT-TRIM TALLYING S-COUNTER FOR ALL 'D'.
+           INSPECT WS-MOT-TRIM TALLYING F-COUNTER FOR ALL 'F'.
+           INSPECT WS-MOT-TRIM TALLYING G-COUNTER FOR ALL 'G'.
+           INSPECT WS-MOT-TRIM TALLYING H-COUNTER FOR ALL 'H'.
+           INSPECT WS-MOT-TRIM TALLYING J-COUNTER FOR ALL 'J'.
+           INSPECT WS-MOT-TRIM TALLYING K-COUNTER FOR ALL 'K'.
+           INSPECT WS-MOT-TRIM TALLYING L-COUNTER FOR ALL 'L'.
+           INSPECT WS-MOT-TRIM TALLYING M-COUNTER FOR ALL 'M'.
+           INSPECT WS-MOT-TRIM TALLYING W-COUNTER FOR ALL 'W'.
+           INSPECT WS-MOT-TRIM TALLYING X-COUNTER FOR ALL 'X'.
+           INSPECT WS-MOT-TRIM TALLYING C-COUNTER FOR ALL 'C'.
+           INSPECT WS-MOT-TRIM TALLYING V-COUNTER FOR ALL 'V'.
+           INSPECT WS-MOT-TRIM TALLYING N-COUNTER FOR ALL 'N'.
+           INSPECT WS-MOT-TRIM TALLYING B-COUNTER FOR ALL 'B'.
+
+           IF H-COUNTER > 1
+               OR Z-COUNTER > 1
+               OR E-COUNTER > 1
+               OR R-COUNTER > 1
+               OR T-COUNTER > 1
+               OR Y-COUNTER > 1
+               OR U-COUNTER > 1
+               OR I-COUNTER > 1
+               OR O-COUNTER > 1
+               OR P-COUNTER > 1
+               OR Q-COUNTER > 1
+               OR S-COUNTER > 1
+               OR F-COUNTER > 1
+               OR G-COUNTER > 1
+               OR H-COUNTER > 1
+               OR J-COUNTER > 1
+               OR K-COUNTER > 1
+               OR L-COUNTER > 1
+               OR M-COUNTER > 1
+               OR W-COUNTER > 1
+               OR X-COUNTER > 1
+               OR C-COUNTER > 1
+               OR V-COUNTER > 1
+               OR W-COUNTER > 1
+               OR X-COUNTER > 1
+               OR N-COUNTER > 1
+               OR B-COUNTER > 1       
+               DISPLAY 'Le mot ' WS-MOT-TRIM 'est un isogramme.'
+               ELSE
+               DISPLAY "Le mot " WS-MOT-TRIM "n'est pas un isogramme."
+           END-IF.
+
+           SET Z-COUNTER TO ZERO.
+           SET E-COUNTER TO ZERO.
+           SET R-COUNTER TO ZERO.
+           SET T-COUNTER TO ZERO.
+           SET Y-COUNTER TO ZERO.
+           SET U-COUNTER TO ZERO.
+           SET I-COUNTER TO ZERO.
+           SET O-COUNTER TO ZERO.
+           SET P-COUNTER TO ZERO.
+           SET Q-COUNTER TO ZERO.
+           SET S-COUNTER TO ZERO.
+           SET F-COUNTER TO ZERO.
+           SET G-COUNTER TO ZERO.
+           SET H-COUNTER TO ZERO.
+           SET J-COUNTER TO ZERO.
+           SET K-COUNTER TO ZERO.
+           SET L-COUNTER TO ZERO.
+           SET M-COUNTER TO ZERO.
+           SET W-COUNTER TO ZERO.
+           SET X-COUNTER TO ZERO.
+           SET C-COUNTER TO ZERO.
+           SET V-COUNTER TO ZERO.
+           SET W-COUNTER TO ZERO.
+           SET X-COUNTER TO ZERO.
+           SET N-COUNTER TO ZERO.
+           SET B-COUNTER TO ZERO.
+
+           DISPLAY "Continuer? (Y/N)".
+           ACCEPT  WS-EXITCODE.
+           MOVE FUNCTION UPPER-CASE (WS-EXITCODE) TO WS-EXITCODE.
+           IF WS-EXITCODE EQUAL "N"           
+           SET WS-FINISHED TO WS-BOUCLING
+           STOP RUN 
+           END-IF.
