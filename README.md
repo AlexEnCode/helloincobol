@@ -1,2 +1,3 @@
 # First step in Cobol .
- Bonjour
+ Bonjour, COLOL à tous!
+ Bonjour !
