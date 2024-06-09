@@ -9,11 +9,12 @@
        environment division.
 
        data division.
+
        working-storage section.
 
       *inputtext is a question outputtext will save your answer.
 
-         01 inputnom     pic x(17) VALUE "Quel est ton nom?".
+         01 inputnom   pic x(17) VALUE "Quel est ton nom?".
        01 outputnom    pic x(10).
        01 inprenom     pic x(20) VALUE "Quel est ton prenom?".
        01 outprenom    pic x(10).
